@@ -2,3 +2,70 @@
   height: 100px;
   background-color: blue;
 }
+
+.logo {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background-color: aqua;
+  &:hover + div {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+  &:hover + div > div {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+}
+
+.circle-menu {
+  transition: 0.5s;
+  position: absolute;
+  transform: rotate(45deg);
+  top: -500px;
+  left: -500px;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-right: 500px solid transparent;
+  border-top: 500px solid transparent;
+  border-left: 500px solid transparent;
+  border-bottom: 500px solid green;
+  border-top-left-radius: 500px;
+  border-top-right-radius: 500px;
+  border-bottom-left-radius: 500px;
+  border-bottom-right-radius: 500px;
+  &:hover {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+  }
+  &:hover > div {
+    transform: rotate(45deg);
+    transition: 0.5s;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+}
+
+.contact {
+  bottom: -300px;
+  right: -200px;
+}
+
+.projects {
+  bottom: -350px;
+  right: -50px;
+}
+
+.media {
+  bottom: -400px;
+  right: 150px;
+}
