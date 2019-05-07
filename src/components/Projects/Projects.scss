@@ -1,5 +1,5 @@
 .Projects {
-  
+  width: 100%;
 }
 
 .cards-slider {
@@ -13,8 +13,9 @@
   position: absolute;
   top: 320px;
   z-index: 1;
+  // color: black;
   font-size: 50px;
-  @include svg-hover-effect(white, 1.5)
+  @include svg-hover-effect(black, 1.5)
 }
 
 .prev-btn {
@@ -30,17 +31,9 @@
   .cards-slider.active-slide-#{$i} #card-#{$i} {
     opacity: 1;
     transform: scale(1);
-    height: 600px;
-    background-color: $memoize-blue;
+    height: 800px;
+    background-color: blue;
     border-radius: 10px;
-
-    .CodeMirror {
-      visibility: visible;
-    }
-
-    .additional-info-container {
-      visibility: visible;
-    }
   }
 }
 
@@ -52,12 +45,12 @@
 
   .Card {
     flex: 1;
-    width: 600px;
+    width: 800px;
     height: 130px;
     opacity: 0.7;
     transform: scale(0.6);
     box-shadow: none;
-    background-color: $memoize-blue;
+    background-color: blue;
     border-color: white;
     transition: opacity 300ms linear,
       height 300ms linear,

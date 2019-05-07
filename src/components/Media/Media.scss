@@ -1,0 +1,28 @@
+.Media {
+  width: 100%;
+  display: flex;
+  background-color: blue;
+  height: 100vh;
+}
+
+.media-container {
+  width: 40vw;
+  height: 40vw;
+  margin: 0 auto;
+  justify-content: space-around;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  // align-content: flex-end;
+}
+
+.media-header-container {
+  display: block;
+}
+
+.image {
+  width: 40vw;
+  height: 30vw;
+  margin: 0 auto;
+}
+

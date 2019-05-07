@@ -1,5 +1,10 @@
+@import 'normalize';
+@import 'mixins';
 @import 'index.scss';
 @import './components/App/App.scss';
+@import './components/Card/Card.scss';
 
+@import './components/Media/Media.scss';
 @import './components/Header/Header.scss';
 @import './components/Display/Display.scss';
+@import './components/Projects/Projects.scss';
