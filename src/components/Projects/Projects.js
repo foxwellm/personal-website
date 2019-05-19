@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import data from '../../staticData/projectData'
 import Card from '../Card/Card'
+import PicYourLandmark from '../projectDisplay/PicYourLandmark/PicYourLandmark'
+import PalettePicker from '../projectDisplay/PalettePicker/PalettePicker'
+import MyFitnessPup from '../projectDisplay/MyFitnessPup/MyFitnessPup'
+import TrapperKeeper from '../projectDisplay/TrapperKeeper/TrapperKeeper'
+import GameFlix from '../projectDisplay/GameFlix/GameFlix'
 
 class Projects extends Component {
   constructor() {
@@ -12,7 +17,7 @@ class Projects extends Component {
 
   nextProject = () => {
     const currentIndex = this.state.currentIndex + 1
-    this.setState({currentIndex})
+    this.setState({ currentIndex })
   }
 
   prevProject = () => {
@@ -21,11 +26,11 @@ class Projects extends Component {
   }
 
   render() {
-    const {currentIndex} = this.state
-    const projects = data.projectData.map((project, i) => {
-      return <Card cardNumber={i} projectName={project.name} />
-    })
-    
+    const { currentIndex } = this.state
+    // const projects = data.projectData.map((project, i) => {
+    //   return <Card cardNumber={i} projectName={project.name} />
+    // })
+
 
     return (
       <div className='Projects'>
@@ -34,19 +39,24 @@ class Projects extends Component {
             <div
               className="prev-btn"
               onClick={this.prevProject}
-              >
+            >
               <i className="fas fa-arrow-circle-left"></i></div>
           }
           <div className="cards-slider-wrapper" style={{
-            'transform': `translateX(-${currentIndex * (100 / 3)}%)`
+            'transform': `translateX(-${currentIndex * (100 / 5)}%)`
           }}>
-            {projects}
-        </div>
-          {currentIndex !== 2 &&
+            <PicYourLandmark />
+            <PalettePicker />
+            <MyFitnessPup />
+            <TrapperKeeper />
+            <GameFlix />
+
+          </div>
+          {currentIndex !== 4 &&
             <div
               className="next-btn"
               onClick={this.nextProject}
-              >
+            >
               <i className="fas fa-arrow-circle-right"></i>
             </div>
           }

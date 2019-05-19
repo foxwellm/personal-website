@@ -1,0 +1,57 @@
+.info-container {
+  display: flex;
+}
+
+.content-container {
+  // height: 540px;
+  overflow: scroll;
+}
+
+.demo-container {
+  display: flex;
+  img {
+    margin: 10px;
+  }
+}
+.card-header {
+  height: 40px;
+}
+
+
+.phone {
+  // margin-top: 400px;
+  width: 200px;
+  height: 400px;
+}
+
+.site {
+  width: 600px;
+  height: 400px;
+}
+
+.screen {
+  width: 40vw;
+  height: 30vw;
+}
+
+.info-p {
+  margin: 20px;
+}
+
+.Card {
+
+}
+
+.content-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.content-container::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.content-container::-webkit-scrollbar-thumb {
+    border-radius: 18px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
