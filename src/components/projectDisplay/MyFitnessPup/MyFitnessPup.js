@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import pMain from '../../../assets/Pmain.png'
+import fMac from '../../../assets/fitnessMac.png'
 
 
 export default class MyFitnessPup extends Component {
-
+  handleCardClick = () => {
+    this.props.changeProjNumber(2)
+  }
   render() {
-
 
     return (
 
-      <article id="card-2" className="Card" >
-        <h1 className='card-header'>My Fitness Pup</h1>
+      <article id="card-2" className={['Card', this.props.currentIndex !== 2 ? 'Card-not-active' : null].join(' ')} onClick={this.handleCardClick} >
+        <h1 className={['card-header', this.props.currentIndex > 2 ? 'card-header-left' : null].join(' ')}>My Fitness Pup</h1>
         <div className='info-container'>
           <div className='demo-container'>
-            <img src={pMain} className='site' alt="This will display an animated GIF" />
+            <img src={fMac} className='site' alt="My Fitness Pup page" />
           </div>
           <div className='info'>
-            <h3>Description</h3>
-            <p className='info-p'>Pic Your Landmark is a React Native app based on the famous game 'Pokemon Go' - except our users can 'collect' famous landmarks! When a user visits a landmark, they can take and store their picture in our app. Users gain points/gems based on how many landmarks they have 'collected'. They can show off their status as well as collection of photos to their friends and family.</p>
-
-            <p>Available on <a href='https://play.google.com/store/apps/details?id=com.heatherandmatt.picyourlandmark' target='_blank'>Google Play </a></p>
-            <p>GitHub repo: <a href='https://github.com/foxwellm/PicYourLandmark' target='_blank'>github.com/foxwellm/PicYourLandmark</a></p>
+            <p className='info-p'>My Fitness Pup helps users that love to run and hike connect to local shelter dogs that love to as well!</p>
+            <div className={['info-btn-container', this.props.currentIndex > 2 ? 'unclickable' : null].join(' ')}>
+              <a href='https://my-fitness-pup.herokuapp.com/' target='_blank' rel="noopener noreferrer" class="waves-effect waves-light #e53935 red darken-1 btn-large">Live Site</a>
+              <a href='https://github.com/foxwellm/MyFitnessPup' target='_blank' rel="noopener noreferrer" class="waves-effect waves-light #e53935 red darken-1 btn-large">GitHub</a>
+            </div>
           </div>
 
         </div>
