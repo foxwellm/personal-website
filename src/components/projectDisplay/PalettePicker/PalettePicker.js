@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
-import pMain from '../../../assets/Pmain.png'
+import pMac from '../../../assets/paletteMac.png'
+
 
 
 export default class PicYourLandmark extends Component {
-
+  handleCardClick = () => {
+    this.props.changeProjNumber(1)
+  }
   render() {
 
+    const CardCss = ['Card', this.props.currentIndex !== 1 ? 'Card-not-active' : null].join(' ')
 
     return (
 
-      <article id="card-1" className="Card" >
-        <h1 className='card-header'>Palette Picker</h1>
-        {/* <div className='content-container'> */}
+      <article id="card-1" className={CardCss} onClick={this.handleCardClick} >
+        <h1 className={['card-header', this.props.currentIndex > 1 ? 'card-header-left' : null].join(' ')}>Palette Picker</h1>
         <div className='info-container'>
           <div className='demo-container'>
-            <img src={pMain} className='site' alt="This will display an animated GIF" />
+            <img src={pMac} className='site' alt="Palette Picker page" />
           </div>
           <div className='info'>
-            <h3>Description</h3>
-            <p className='info-p'>Pic Your Landmark is a React Native app based on the famous game 'Pokemon Go' - except our users can 'collect' famous landmarks! When a user visits a landmark, they can take and store their picture in our app. Users gain points/gems based on how many landmarks they have 'collected'. They can show off their status as well as collection of photos to their friends and family.</p>
-
-            <p>Available on <a href='https://play.google.com/store/apps/details?id=com.heatherandmatt.picyourlandmark' target='_blank'>Google Play </a></p>
-            <p>GitHub repo: <a href='https://github.com/foxwellm/PicYourLandmark' target='_blank'>github.com/foxwellm/PicYourLandmark</a></p>
+            <p className='info-p'>Based on the website Coolors, you can generate color palettes for websites and other design projects.</p>
+            <div className={['info-btn-container', this.props.currentIndex > 1 ? 'unclickable' : null].join(' ')}>
+              <a href='https://palettes-picker.herokuapp.com/' target='_blank' rel="noopener noreferrer" class="waves-effect waves-light #e53935 red darken-1 btn-large">Live Site</a>
+              <a href='https://github.com/foxwellm/PalettePicker' target='_blank' rel="noopener noreferrer" class="waves-effect waves-light #e53935 red darken-1 btn-large">GitHub</a>
+            </div>
           </div>
 
         </div>
