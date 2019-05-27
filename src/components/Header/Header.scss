@@ -1,71 +1,113 @@
 .Header {
   height: 100px;
-  background-color: blue;
+}
+
+.nav-button {
+  text-decoration: none;
+  position: relative;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 25px;
+  font-weight: 600;
+  &:visited {
+    color: #e53935;
+  }
+  &:link {
+    color: #e53935;
+  }
+  &:hover {
+    color: whitesmoke;
+  }
+}
+
+.logo-nav-button {
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+  top: 57px;
+  left: 51px;
+  height: 150px;
+  width: 150px;
+  &:visited {
+    color: #e53935;
+  }
+  &:link {
+    color: #e53935;
+  }
+  &:hover {
+    color: whitesmoke;
+  }
+}
+
+.selected {
+  text-decoration: underline;
+  &:hover {
+    color: #e53935;
+  }
 }
 
 .logo {
-  height: 80px;
-  width: 80px;
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 60px;
+  height: 150px;
+  width: 150px;
   position: relative;
-  top: 10px;
-  left: 10px;
+  top: -60px;
+  left: -40px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #e53935;
   z-index: 3;
-  background-color: aqua;
   &:hover + div {
     transform: rotate(-45deg);
-    transition: 0.5s;
+    transition: 0.2s;
   }
   &:hover + div > div {
     transform: rotate(45deg);
-    transition: 0.5s;
+    transition: 0.2s;
   }
 }
 
 .circle-menu {
-  transition: 0.5s;
+  transition: 0.2s;
   position: absolute;
   transform: rotate(45deg);
-  top: -500px;
-  left: -500px;
+  top: -300px;
+  left: -300px;
   z-index: 2;
   width: 0px;
   height: 0px;
-  border-right: 500px solid transparent;
-  border-top: 500px solid transparent;
-  border-left: 500px solid transparent;
-  border-bottom: 500px solid green;
-  border-top-left-radius: 500px;
-  border-top-right-radius: 500px;
-  border-bottom-left-radius: 500px;
-  border-bottom-right-radius: 500px;
+  border-right: 300px solid transparent;
+  border-top: 300px solid transparent;
+  border-left: 300px solid transparent;
+  border-bottom: 300px solid lightgray;
+  border-top-left-radius: 300px;
+  border-top-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  .menu-button {
+    position: absolute;
+    z-index: 3;
+    transform: rotate(-45deg);
+    transition: 0.2s;
+  }
+  .contact {
+    bottom: -237px;
+    right: 27px;
+  }
+  .projects {
+    bottom: -232px;
+    right: -84px;
+  }
+  .media {
+    bottom: -195px;
+    right: -150px;
+  }
   &:hover {
     transform: rotate(-45deg);
-    transition: 0.5s;
+    transition: 0.2s;
   }
   &:hover > div {
     transform: rotate(45deg);
-    transition: 0.5s;
+    transition: 0.2s;
   }
-}
-
-.menu-button {
-  position: absolute;
-  z-index: 3;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-}
-
-.contact {
-  bottom: -300px;
-  right: -200px;
-}
-
-.projects {
-  bottom: -350px;
-  right: -50px;
-}
-
-.media {
-  bottom: -400px;
-  right: 150px;
 }
