@@ -1,0 +1,24 @@
+.Contact {
+  background-color: #e9e9eb;
+  color: #e53935;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.contact-container {
+  height: 20vw;
+  margin: auto auto;
+}
+
+.github-image {
+  height: 40px;
+  width: 40px;
+  padding: 20px 20px 0 0;
+}
+
+.github-text {
+  color: #e53935;
+  font-size: 35px;
+}
