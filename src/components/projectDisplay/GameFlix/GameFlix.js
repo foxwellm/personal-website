@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import gameFlix from '../../../assets/gameflix.gif'
+import gMac from '../../../assets/gameflixMac.png'
 
 
-export default class PicYourLandmark extends Component {
+export default class GameFlix extends Component {
+
+  handleCardClick = () => {
+    this.props.changeProjNumber(4)
+  }
 
   render() {
+    const CardCss = ['Card', this.props.currentIndex !== 4 ? 'Card-not-active' : null].join(' ')
 
 
     return (
 
-      <article id="card-4" className="Card" >
-        <h1 className='card-header'>GameFlix</h1>
-        {/* <div className='content-container'> */}
+      <article id="card-4" className={CardCss} onClick={this.handleCardClick} >
+        <h1 className={['card-header', this.props.currentIndex > 4 ? 'card-header-left' : null].join(' ')}>GameFlix</h1>
         <div className='info-container'>
           <div className='demo-container'>
-            <img src={gameFlix} className='site' alt="This will display an animated GIF" />
+            <img src={gMac} className='site' alt="Gameflix page" />
           </div>
           <div className='info'>
-            <h3>Description</h3>
-            <p className='info-p'>Pic Your Landmark is a React Native app based on the famous game 'Pokemon Go' - except our users can 'collect' famous landmarks! When a user visits a landmark, they can take and store their picture in our app. Users gain points/gems based on how many landmarks they have 'collected'. They can show off their status as well as collection of photos to their friends and family.</p>
-
-            <p>Available on <a href='https://play.google.com/store/apps/details?id=com.heatherandmatt.picyourlandmark' target='_blank'>Google Play </a></p>
-            <p>GitHub repo: <a href='https://github.com/foxwellm/PicYourLandmark' target='_blank'>github.com/foxwellm/PicYourLandmark</a></p>
-          </div>
+            <p className='info-p'>Use Gameflix to discover your new favorite board or card game!</p>
+            <div className={['info-btn-container', this.props.currentIndex > 4 ? 'unclickable' : null].join(' ')}>
+              <a href='https://github.com/foxwellm/gameflix' target='_blank' rel="noopener noreferrer" class="waves-effect waves-light #e53935 red darken-1 btn-large">GitHub</a>
+            </div>          </div>
 
         </div>
       </article>
