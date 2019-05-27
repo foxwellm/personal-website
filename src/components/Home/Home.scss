@@ -1,0 +1,31 @@
+.Home {
+  background-color: #e9e9eb;
+  color: #e53935;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.profile-container {
+  height: 20vw;
+  width: 60vw;
+  margin: auto auto;
+  display: flex;
+}
+
+.profile-p {
+  font-size: 2vw;
+  color: #e53935;
+  font-family: "Crete Round", serif;
+  padding-left: 40px;
+}
+.p-container {
+  width: 45vw;
+}
+
+.profile-img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
